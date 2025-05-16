@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Mobile menu toggle will be inserted here by JavaScript -->
+            <div id="logo">
+                <img src="./image/my_logo.png" alt="Logo">
+                <h1>RH Store</h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimony">Testimony</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            
+                            <div class="empty-cart">Your cart is empty</div>
+                        </div>
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span class="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span class="shipping">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery:</span>
+                                <span class="delivery">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Discount:</span>
+                                <span class="discount">-$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span class="total-price">$0.00</span>
+                            </div>
+                        </div>
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div> 
+        </nav>
+        <div id="home" class="carousel w-full">
+            <div id="hero" class="carousel-item relative w-full">
+                <h1>Welcome to <span>RH Store</span> </h1>
+                <p>"Step into our store and discover fashion that's as individual as you are. <br> Explore, express, and embrace
+                    your
+                    signature look."</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+            <div id="hero2" class="carousel-item relative w-full">
+                <h1>Our Services:</h1>
+                <ul>
+                    <li><i class="fa-solid fa-truck"></i> Free Shipping</li>
+                    <li><i class="fa-solid fa-headset"></i> 24/7 Customer Support</li>
+                    <li><i class="fa-solid fa-money-bill-1-wave"></i> Money Back Guarantee</li>
+                    <li><i class="fa-solid fa-shield"></i> Secure Payment</li>
+                </ul>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+            <div id="hero3" class="carousel-item relative w-full">
+                <h1>You can reach us:</span> </h1>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fa-solid fa-envelope"></i> rhstore@gmail.org.bd </li>
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Main St, Shop#34, Chawk Bazar, Chittagong</li>
+                    <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 10:00 PM</li>
+                    <li><i class="fa-solid fa-globe"></i> www.rhstore.com</li>
+                </ul>
+                <a href="#contact" class="btn">Contact now</a>
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#hero" class="btn btn-xs">1</a>
+            <a href="#hero2" class="btn btn-xs">2</a>
+            <a href="#hero3" class="btn btn-xs">3</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="products" class="products-section">
+            <div class="products-header">
+                <h2>Our Collection</h2>
+                <p>Discover our latest styles and find your perfect look</p>
+            </div>
+            <div class="products-layout">
+                <div class="products-container" id="products-container">
+                    
+                    
+                    <div class="loading">Loading products...</div>
+                </div>
+                <div class="cart-sidebar">
+                    <div class="cart-summary-card">
+                        <h3>Cart Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span class="sidebar-subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span class="sidebar-shipping">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery:</span>
+                            <span class="sidebar-delivery">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Discount:</span>
+                            <span class="sidebar-discount">-$0.00</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span class="sidebar-total">$0.00</span>
+                        </div>
+                        <button class="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        <section id="about" class="about-section">
+            <div class="about-header">
+                <h2>About RH Store</h2>
+                <p>Timeless fashion, modern craftsmanship.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./image/about_img.png" alt="RH Store Fashion">
+                </div>
+                <div class="about-text">
+                    <h3>Crafting Style with Passion</h3>
+                    <p>At RH Store, we believe clothing is more than fabric—it's a statement. Our collections blend comfort, sustainability, and bold design to deliver timeless fashion for everyone.</p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <p>1.2K+</p>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat-box">
+                            <p>98%</p>
+                            <p>Customer Satisfaction</p>
+                        </div>
+                        <div class="stat-box">
+                            <p>24/7</p>
+                            <p>Support Available</p>
+                        </div>
+                        <div class="stat-box">
+                            <p>2020</p>
+                            <p>Established Since</p>
+                        </div>
+                    </div>
+                    <a href="#products" class="about-btn">Shop Now</a>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" aria-label="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimony" class="bg-gray-500 py-10">
+            <h1 class="text-3xl font-bold text-center text-blue-700">What Our Customers Say:</h1>
+            <div class="carousel w-full h-auto">
+                <div id="slide1" class="carousel-item relative w-full h-auto flex items-center justify-center pb-10">
+                    <div id="client-card" class="flex flex-col items-center justify-center space-y-4 max-w-md text-center px-6">
+                        <img src="./image/testimony/p_01.png" alt="Client Image" class="w-32 h-32 rounded-full object-cover" />
+                        <h2 class="text-xl font-semibold">John Doe</h2>
+                        <p class="text-gray-300">
+                            "I had a fantastic experience shopping at RH Store. The staff was
+                            incredibly helpful, and I found exactly what I was looking for.
+                            Highly recommend!"
+                        </p>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full h-auto flex items-center justify-center pb-10">
+                    <div id="client-card" class="flex flex-col items-center justify-center space-y-4 max-w-md text-center px-6">
+                        <img src="./image/testimony/p_02.png" alt="Client Image" class="w-32 h-32 rounded-full object-cover" />
+                        <h2 class="text-xl font-semibold">Eric Sen</h2>
+                        <p class="text-gray-300">
+                            "The quality of the products is outstanding, and my order arrived faster than expected. RH Store has
+                            earned a lifelong
+                            customer!"
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full h-auto flex items-center justify-center pb-10">
+                    <div id="client-card" class="flex flex-col items-center justify-center space-y-4 max-w-md text-center px-6">
+                        <img src="./image/testimony/p_03.png" alt="Client Image" class="w-32 h-32 rounded-full object-cover" />
+                        <h2 class="text-xl font-semibold">Daniel Richard</h2>
+                        <p class="text-gray-300">
+                            "Incredible shopping experience. The website is easy to navigate, and the checkout process was
+                            seamless. Five stars!"
+                        </p>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full h-auto flex items-center justify-center pb-10">
+                    <div id="client-card" class="flex flex-col items-center justify-center space-y-4 max-w-md text-center px-6">
+                        <img src="./image/testimony/p_04.png" alt="Client Image" class="w-32 h-32 rounded-full object-cover" />
+                        <h2 class="text-xl font-semibold">David Doe</h2>
+                        <p class="text-gray-300">
+                            "From browsing to delivery, everything was perfect. The team even included a handwritten thank-you
+                            note. Such a personal
+                            touch!"
+                        </p>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide5" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide5" class="carousel-item relative w-full h-auto flex items-center justify-center pb-10">
+                    <div id="client-card" class="flex flex-col items-center justify-center space-y-4 max-w-md text-center px-6">
+                        <img src="./image/testimony/p_08.png" alt="Client Image" class="w-32 h-32 rounded-full object-cover" />
+                        <h2 class="text-xl font-semibold">Sumaiya Rahman</h2>
+                        <p class="text-gray-300">
+                            "I had questions about sizing and the team responded within minutes. My dress fits like a dream.
+                            Highly recommend RH
+                            Store!"
+                        </p>
+                    </div>
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contacts">
+                <h1>Contact Us</h1>
+                <p id="cont-desc">We would love to hear from you! If you have any questions, comments, or feedback, please feel free to reach out to us.</p>
+                <div class="contact-section">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Address</h3>
+                        <p>Road.14, Chawk Bazar, Chittagong</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Mobile</h3>
+                        <p>+8801823456789</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>hr_store@gmail.com</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Open: Saturday - Thursday</h3>
+                        <p>09:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <h1>Get in Touch</h1>
+                <p id="cont-desc">If you have any questions or inquiries, please fill out the form below and we will get back to you as soon as possible.</p>
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img id="logo" src="./image/my_logo.png" alt="Logo">
+            <h1>RH Store</h1>
+        </div>
+        <p>&copy; 2020 RH Store. All rights reserved.</p>
+        <div class="footer-social-icons ">
+            <a href="https://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com" aria-label="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
